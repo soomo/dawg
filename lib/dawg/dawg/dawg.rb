@@ -87,7 +87,7 @@ module Dawg
 
     def save(filename)
       dawg = self
-      File.open(filename,'w') do |f|
+      File.open(filename,'wb') do |f|
         write_int(dawg.node_count, f) # overall nodes count
         write_int(dawg.edge_count, f) # overall edge count
         edges_pos = 0
